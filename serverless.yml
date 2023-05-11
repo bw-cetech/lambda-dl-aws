@@ -1,0 +1,26 @@
+#serverless.yml
+service: serverless-flask-container
+
+provider:
+  name: aws
+  region: ${opt:region, 'eu-west-1'}
+  ecr:
+    images:
+      appimage:
+        path: ./
+
+functions:
+  main:
+    image:
+      name: appimage
+    timeout: 30
+    events:
+      - http: ANY /
+      - http: 'ANY /{proxy+}'
+
+custom:
+  apigwBinary:
+    types: 
+      - 'multipart/form-data'
+      - 'image/png'
+      - 'image/jpeg'
