@@ -89,8 +89,8 @@ def upload_files():
                 file_ext != validate_image(uploaded_file.stream):
             abort(400) """ # removed validation for now, can test as a post-process
       
-        myBucket = '[YOUR-S3-BUCKET]'
-        myKey = 'serverless/serverless-flask-container/uplImg.png'
+        myBucket = 'arn:aws:s3:::serverless-flask-contain-serverlessdeploymentbuck-p3youfljn9jy'
+        myKey = 'serverless/serverless-flask-container-new/uplImg.png'
         write_image_to_s3(uploaded_file, myBucket, myKey, region_name='eu-west-1')
 
         print("uploaded image to S3")
