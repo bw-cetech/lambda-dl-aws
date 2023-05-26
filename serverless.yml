@@ -1,5 +1,5 @@
 #serverless.yml
-service: serverless-flask-container
+service: serverless-flask-container-new
 
 provider:
   name: aws
