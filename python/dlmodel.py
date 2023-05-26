@@ -62,7 +62,7 @@ class Model():
 
         print(predProb)
         print(predicted_label) # formerly print(pred)
-        print_msg = str(category_names[predicted_label-1]) + " (probability: " + str(predicted_prob) + ")" # NEW
+        print_msg = str(category_names[predicted_label]) + " (probability: " + str(predicted_prob) + ")" # NEW
 
         #return category_names[pred] #, pred_prob, msg
         return print_msg
