@@ -30,7 +30,7 @@ class Model():
 
         img_height, img_width = 224,224
 
-        category_names = ["Bikes","Forbidden_for_traffic", "Intersection", "No_entry", "Pedestrians", "Right_of_way", "Slippery_road", "Speed_60", "Stop", "Yield", "Festive"]
+        category_names = ["Bikes","Forbidden_for_traffic", "Intersection", "No_entry", "Pedestrians", "Right_of_way", "Slippery_road", "Speed_60", "Stop", "Yield"]
 
         # image_array = np.expand_dims(image_array, axis=0) # using below instead to avoid install of numpy
         # print(image_array.shape)
